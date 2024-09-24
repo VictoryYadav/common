@@ -19,10 +19,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		return $CI->User->recordInsert($tbl,$data);
 	}
 
-	function updateRecord($tbl,$where,$data){
+	function updateRecord($tbl,$data, $where){
 		$CI = & get_instance();
 		$CI->load->model('User');
-		$CI->User->recordUpdate($tbl,$where,$data);
+		$CI->User->recordUpdate($tbl,$data, $where);
 	}
 
 	function deleteRecord($tbl,$where){

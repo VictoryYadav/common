@@ -24,8 +24,8 @@ class User extends CI_Model{
 		return $this->db->insert_id();
 	}
 
-	public function recordUpdate($tbl,$where,$data){
-		$this->db->update($tbl, $data, $where);
+	public function recordUpdate($tbl,$data, $where){
+		$this->db->update($tbl, $where, $data);
 	}
 
 	public function recordDelete($tbl,$where){
